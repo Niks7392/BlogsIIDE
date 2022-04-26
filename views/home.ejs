@@ -1,0 +1,32 @@
+
+<%- include('partials/header.ejs') %>
+
+
+<div class="createContainer">
+    <a href = "/create" class="createblog">Create New Blog</a>
+</div>
+<div class="caution">
+    <h4 class="note cd">Note: Only use .jpg Links & responsivenes != true</h4>
+</div>
+
+<% blogPost.forEach((blog)=>{%>
+
+
+<section id="all-contents">
+    <div class="inside">
+        <div class="title cd"><%=blog.title%></div>
+        <div class="image-container">
+            <img class="image" src="<%=blog.img_url%>" alt="">
+        </div> 
+        <span></span>
+        <div class="btn-container">
+            <a class="btn" href="/show/<%=blog.id%>">Read More</a>
+        </div>
+        <p class="cd "><%=blog.created%></p>
+        <div class="hr"></div>
+    </div>
+    
+  
+</section>
+
+<%})%>
