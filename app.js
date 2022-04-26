@@ -18,6 +18,6 @@ app.use(methodOverride(`_method`))
 app.use(`/`, routes);
 
 
-app.listen(3000, ()=>{
+app.listen(3000 || process.env.PORT, ()=>{
     console.log(`running at localhost/3000`);
 })
